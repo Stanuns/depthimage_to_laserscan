@@ -111,7 +111,7 @@ sensor_msgs::msg::LaserScan::UniquePtr DepthImageToLaserScan::convert_msg(
 
   // Calculate angle_min and angle_max by measuring angles between the left ray, right ray,
   // and optical center ray
-  cv::Point2d raw_pixel_left(0, cam_model_.cy());
+  cv::Point2d raw_pixel_left(0, cam_model_.cy()); //cam_model_.cy()=  k[5] = 242.85137939453125  from /camera/depth/camera_info
   cv::Point2d rect_pixel_left = cam_model_.rectifyPoint(raw_pixel_left);
   cv::Point3d left_ray = cam_model_.projectPixelTo3dRay(rect_pixel_left);
 
