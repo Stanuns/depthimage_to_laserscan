@@ -19,3 +19,9 @@ Parameters
 * `range_max` (float) - The maximum distance in meters a projected point should be.  Points further than this are discarded.  Defaults to 10.0 meters.
 * `scan_height` (int) - The row from the depth image to use for the laser projection.  Defaults to 1.
 * `output_frame` (string) - The frame id to publish in the LaserScan message.  Defaults to "camera_depth_frame".
+
+Usage
+----------
+```bashrc
+ros2 launch depthimage_to_laserscan depthimage_to_laserscan-launch.py
+```
